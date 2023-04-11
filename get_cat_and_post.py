@@ -14,7 +14,7 @@ def upload_media():
     )
     
     tweepy_api = tweepy.API(tweepy_auth)
-    url = "https://api.thecatapi.com/v1/images/search?mime_types=jpg,png&api_key=API_KEY"
+    url = "https://api.thecatapi.com/v1/images/search?mime_types=jpg&api_key=API_KEY"
     cats = requests.request("GET", url).json()
     cat_pic = cats[0]["url"]
     img_data = requests.get(cat_pic).content
